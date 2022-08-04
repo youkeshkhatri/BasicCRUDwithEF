@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Project1.Models.Student>
+
+
+@using (Html.BeginForm("Add", "Students"))
+{
+
+    <form action="" method="post">
+        <h2>Fill the Form</h2>
+        <table>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" name="Name" placeholder="Full Name" required /></td>
+            </tr>
+
+
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" name="Addrss" placeholder="Address" required /></td>
+            </tr>
+
+            <tr>
+                <td>Contact:</td>
+                <td><input type="text" name="Contact" placeholder="Contact" required /></td>
+            </tr>
+        </table>
+        <br>
+        <div>
+            <button type="submit" name="Create" class="btn btn-success">Submit</button>
+            <a asp-action="Index" class="btn btn-success">Load</a>
+        </div>
+    </form>
+}
+
+
